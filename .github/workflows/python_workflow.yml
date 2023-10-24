@@ -1,0 +1,25 @@
+name: Python Script CI
+
+on:
+  push:
+    branches:
+      - main  # Replace with the branch you want to trigger the workflow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9  # Specify the Python version you want to use
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt  # Replace with your dependency installation command
+
+    - name: Run Python script
+      run: python your_script.py  # Replace with the command to run your Python script
