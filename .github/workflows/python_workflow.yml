@@ -22,4 +22,4 @@ jobs:
       run: pip install -r requirements.txt  # Replace with your dependency installation command
 
     - name: Run Python script
-      run: python your_script.py  # Replace with the command to run your Python script
+      run: python hello_actions.py  # Replace with the command to run your Python script
