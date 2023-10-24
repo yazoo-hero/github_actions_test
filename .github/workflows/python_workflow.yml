@@ -1,6 +1,21 @@
 name: Python Script CI
 
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
   schedule:
     - cron: '0 21 * * *'  # This will trigger the workflow at 00:00 (midnight) EEST
 
